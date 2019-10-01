@@ -4,5 +4,11 @@ services:
   app1:
     container_name: app1
     build: .
-    ports:
-      - 7000:80
+    networks:
+      nginx_net:
+    #ports:
+    #  - 7000:80
+
+networks:
+  nginx_net:
+    external: true
